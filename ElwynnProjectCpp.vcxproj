@@ -151,9 +151,17 @@
     <ClCompile Include="src\MathUtils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="dependencies\include\x64\GLFW\glfw3.h" />
+    <ClInclude Include="dependencies\include\x64\GLFW\glfw3native.h" />
+    <ClInclude Include="dependencies\include\x86\GLFW\glfw3.h" />
+    <ClInclude Include="dependencies\include\x86\GLFW\glfw3native.h" />
     <ClInclude Include="src\Cube.h" />
     <ClInclude Include="src\Game.h" />
     <ClInclude Include="src\MathUtils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="dependencies\lib\x64\glfw3.lib" />
+    <Library Include="dependencies\lib\x86\glfw3.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

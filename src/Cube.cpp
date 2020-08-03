@@ -18,14 +18,14 @@ Cube::~Cube() {
 }
 
 void Cube::rotate(float alpha, float beta, float gamma) {
-	MathUtils::rotatePoint(vertex1, alpha, beta, gamma);
-	MathUtils::rotatePoint(vertex2, alpha, beta, gamma);
-	MathUtils::rotatePoint(vertex3, alpha, beta, gamma);
-	MathUtils::rotatePoint(vertex4, alpha, beta, gamma);
-	MathUtils::rotatePoint(vertex5, alpha, beta, gamma);
-	MathUtils::rotatePoint(vertex6, alpha, beta, gamma);
-	MathUtils::rotatePoint(vertex7, alpha, beta, gamma);
-	MathUtils::rotatePoint(vertex8, alpha, beta, gamma);
+    MathUtils::rotatePoint(vertex1, alpha, beta, gamma);
+    MathUtils::rotatePoint(vertex2, alpha, beta, gamma);
+    MathUtils::rotatePoint(vertex3, alpha, beta, gamma);
+    MathUtils::rotatePoint(vertex4, alpha, beta, gamma);
+    MathUtils::rotatePoint(vertex5, alpha, beta, gamma);
+    MathUtils::rotatePoint(vertex6, alpha, beta, gamma);
+    MathUtils::rotatePoint(vertex7, alpha, beta, gamma);
+    MathUtils::rotatePoint(vertex8, alpha, beta, gamma);
 }
 
 void Cube::render() {

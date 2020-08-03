@@ -5,12 +5,12 @@
 #include "Cube.h"
 
 class Game {
-	public:
-		static void init();
-		static void update(long timeElapsed);
-		static void render(long timeElapsed);
+public:
+	static void init();
+	static void update(long timeElapsed);
+	static void render(long timeElapsed);
 
-	private:
+private:
 };
 
 #endif
