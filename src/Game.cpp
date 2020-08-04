@@ -1,25 +1,34 @@
 #include "Game.h"
 
-Cube cube;
+Cube cube01;
+Cube cube02;
+Cube cube03;
+Cube cube04;
+Cube cube05;
 
 void Game::init() {
-    cube = Cube();
+    cube01 = Cube(new float[3]{-0.45, -0.45, 0}, 0.25f);
+    cube02 = Cube(new float[3]{0.45, 0.45, 0}, 0.25f);
+    cube03 = Cube(new float[3]{0.45, -0.45, 0}, 0.25f);
+    cube04 = Cube(new float[3]{-0.45, 0.45, 0}, 0.25f);
+    cube05 = Cube();
 }
 
 void Game::update(long timeElapsed) {
-    float alpha = 0.0005 * timeElapsed, beta = 0.00075 * timeElapsed, gamma = 0.001 * timeElapsed;
-    cube.rotate(alpha, beta, gamma);
+    cube01.rotate(0.001f * timeElapsed, 0.00125f * timeElapsed, 0.0015f * timeElapsed);
+    cube02.rotate(0.001f * timeElapsed, 0.00125f * timeElapsed, 0.0015f * timeElapsed);
+    cube03.rotate(0.001f * timeElapsed, 0.00125f * timeElapsed, 0.0015f * timeElapsed);
+    cube04.rotate(0.001f * timeElapsed, 0.00125f * timeElapsed, 0.0015f * timeElapsed);
+    cube05.rotate(0.002f * timeElapsed, 0.00225f * timeElapsed, 0.0025f * timeElapsed);
 }
 
 void Game::render(long timeElapsed) {
     /* Render here */
     glClear(GL_COLOR_BUFFER_BIT);
 
-    glBegin(GL_LINE_STRIP);
-
-    glColor3f(1, 1, 1);
-
-    cube.render();
-
-    glEnd();
+    cube01.render();
+    cube02.render();
+    cube03.render();
+    cube04.render();
+    cube05.render();
 }
