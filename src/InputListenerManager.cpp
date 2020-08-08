@@ -2,11 +2,11 @@
 
 bool wKeyPressed, aKeyPressed, sKeyPressed, dKeyPressed, qKeyPressed, eKeyPressed;
 
-void InputListenerManager::init(GLFWwindow* window) {
+void InputListenerManager::init(GLFWwindow *window) {
     glfwSetKeyCallback(window, keyCallback);
 }
 
-void InputListenerManager::keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods) {
+void InputListenerManager::keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods) {
     if (key == GLFW_KEY_W) {
         std::cout << "GLFW_KEY_W pressed!" << std::endl;
         wKeyPressed = action == GLFW_PRESS || action == GLFW_REPEAT;

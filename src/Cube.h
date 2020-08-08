@@ -6,7 +6,7 @@ class Cube {
 public:
 	Coordinates *vertex1, *vertex2, *vertex3, *vertex4, *vertex5, *vertex6, *vertex7, *vertex8;
 
-	Coordinates* center;
+	Coordinates *center;
 	
 	Cube();
 	Cube(Coordinates *center_, float width_);

@@ -18,16 +18,16 @@ void Game::update(long timeElapsed) {
     float gamma = 0;
 
     if (InputListenerManager::isWKeyPressed()) {
-        gamma = 0.001f * timeElapsed;
+        gamma += 0.001f * timeElapsed;
     }
     if (InputListenerManager::isAKeyPressed()) {
-        beta = 0.001f * timeElapsed;
+        beta += 0.001f * timeElapsed;
     }
     if (InputListenerManager::isSKeyPressed()) {
-        gamma = -0.001f * timeElapsed;
+        gamma += -0.001f * timeElapsed;
     }
     if (InputListenerManager::isDKeyPressed()) {
-        beta = -0.001f * timeElapsed;
+        beta += -0.001f * timeElapsed;
     }
 
     cube01.rotate(alpha, beta, gamma);
@@ -39,11 +39,11 @@ void Game::update(long timeElapsed) {
     float translation[3] = {0, 0, 0};
 
     if (InputListenerManager::isQKeyPressed()) {
-        translation[0] = -0.001f * timeElapsed;
+        translation[0] += -0.001f * timeElapsed;
     }
 
     if (InputListenerManager::isEKeyPressed()) {
-        translation[0] = 0.001f * timeElapsed;
+        translation[0] += 0.001f * timeElapsed;
     }
 
     cube01.translate(translation[0], translation[1], translation[2]);
