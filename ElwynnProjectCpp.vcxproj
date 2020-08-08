@@ -145,6 +145,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Coordinates.cpp" />
     <ClCompile Include="src\Cube.cpp" />
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\InputListenerManager.cpp" />
@@ -156,6 +157,7 @@
     <ClInclude Include="dependencies\include\x64\GLFW\glfw3native.h" />
     <ClInclude Include="dependencies\include\x86\GLFW\glfw3.h" />
     <ClInclude Include="dependencies\include\x86\GLFW\glfw3native.h" />
+    <ClInclude Include="src\Coordinates.h" />
     <ClInclude Include="src\Cube.h" />
     <ClInclude Include="src\Game.h" />
     <ClInclude Include="src\InputListenerManager.h" />

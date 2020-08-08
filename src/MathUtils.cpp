@@ -1,15 +1,18 @@
 #include "MathUtils.h"
 
-void MathUtils::rotatePoint(float *point, float alpha, float beta, float gamma) {
-	MathUtils::rotatePoint(point, new float[3] {0, 0, 0}, alpha, beta, gamma);
+void MathUtils::rotatePoint(Coordinates *point, float alpha, float beta, float gamma) {
+	MathUtils::rotatePoint(point, new Coordinates(0, 0, 0), alpha, beta, gamma);
 }
 
-void MathUtils::rotatePoint(float *point, float *centerOfRotation, float alpha, float beta, float gamma) {
-	float* vertexPointer = MathUtils::getPointRotated(point, centerOfRotation, alpha, beta, gamma);
+void MathUtils::rotatePoint(Coordinates *point, Coordinates *centerOfRotation, float alpha, float beta, float gamma) {
+	float* vertexPointer = MathUtils::getPointRotated(
+		new float[3]{point->x, point->y, point->z}, 
+		new float[3]{centerOfRotation->x, centerOfRotation->y, centerOfRotation->z}, 
+		alpha, beta, gamma);
 
-	point[0] = vertexPointer[0];
-	point[1] = vertexPointer[1];
-	point[2] = vertexPointer[2];
+	point->x = vertexPointer[0];
+	point->y = vertexPointer[1];
+	point->z = vertexPointer[2];
 
 	delete[] vertexPointer;
 }

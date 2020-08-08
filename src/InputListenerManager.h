@@ -12,6 +12,8 @@ public:
 	static bool isAKeyPressed();
 	static bool isSKeyPressed();
 	static bool isDKeyPressed();
+	static bool isQKeyPressed();
+	static bool isEKeyPressed();
 
 private:
 };
