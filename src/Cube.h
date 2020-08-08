@@ -3,14 +3,7 @@
 
 class Cube {
 public:
-	float* vertex1;
-	float* vertex2;
-	float* vertex3;
-	float* vertex4;
-	float* vertex5;
-	float* vertex6;
-	float* vertex7;
-	float* vertex8;
+	float *vertex1, *vertex2, *vertex3, *vertex4, *vertex5, *vertex6, *vertex7, *vertex8;
 
 	float* center;
 	

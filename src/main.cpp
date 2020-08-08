@@ -26,7 +26,7 @@ int main(void) {
     /* Make the window's context current */
     glfwMakeContextCurrent(window);
 
-    Game::init();
+    Game::init(window);
 
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(window)) {
@@ -37,7 +37,7 @@ int main(void) {
         Game::update(timeElapsed);
         Game::render(timeElapsed);
 
-        std::cout << "Time elapsed: " << timeElapsed << " ms" << std::endl;
+        //std::cout << "Time elapsed: " << timeElapsed << " ms" << std::endl;
 
         /* Swap front and back buffers */
         glfwSwapBuffers(window);

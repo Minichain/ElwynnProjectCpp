@@ -147,6 +147,7 @@
   <ItemGroup>
     <ClCompile Include="src\Cube.cpp" />
     <ClCompile Include="src\Game.cpp" />
+    <ClCompile Include="src\InputListenerManager.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\MathUtils.cpp" />
   </ItemGroup>
@@ -157,6 +158,7 @@
     <ClInclude Include="dependencies\include\x86\GLFW\glfw3native.h" />
     <ClInclude Include="src\Cube.h" />
     <ClInclude Include="src\Game.h" />
+    <ClInclude Include="src\InputListenerManager.h" />
     <ClInclude Include="src\MathUtils.h" />
   </ItemGroup>
   <ItemGroup>
