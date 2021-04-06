@@ -4,9 +4,9 @@
 
 class Cube {
 public:
-	Coordinates *vertex1, *vertex2, *vertex3, *vertex4, *vertex5, *vertex6, *vertex7, *vertex8;
-
-	Coordinates *center;
+	static const int NUM_OF_VERTICES = 8;
+	Coordinates* vertices;
+	Coordinates* center;
 	
 	Cube();
 	Cube(Coordinates *center_, float width_);

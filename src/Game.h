@@ -7,6 +7,8 @@
 #include "InputListenerManager.h"
 
 class Game {
+	static const int NUM_OF_CUBES = 5;
+
 public:
 	static void init(GLFWwindow *window);
 	static void update(long timeElapsed);

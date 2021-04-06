@@ -29,6 +29,13 @@ int main(void) {
     Game::init(window);
 
     /* Loop until the user closes the window */
+
+    glViewport(0, 0, 512, 512);
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    glOrtho(-1, 1, -1, 1, -1.0, 10.0);
+    glMatrixMode(GL_MODELVIEW);
+
     while (!glfwWindowShouldClose(window)) {
 
         timeElapsed = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now() - lastUpdateTime).count();

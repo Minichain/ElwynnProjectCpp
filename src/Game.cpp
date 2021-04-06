@@ -1,15 +1,17 @@
 #include "Game.h"
 
-Cube cube01, cube02, cube03, cube04, cube05;
+Cube* cubes;
 
 void Game::init(GLFWwindow *window) {
     InputListenerManager::init(window);
 
-    cube01 = Cube(new Coordinates(-0.45, -0.45, 0), 0.25f);
-    cube02 = Cube(new Coordinates(0.45, 0.45, 0), 0.25f);
-    cube03 = Cube(new Coordinates(0.45, -0.45, 0), 0.25f);
-    cube04 = Cube(new Coordinates(-0.45, 0.45, 0), 0.25f);
-    cube05 = Cube();
+    cubes = (Cube*) malloc(NUM_OF_CUBES * sizeof(Cube));;
+
+    cubes[0] = Cube(new Coordinates(-0.45, -0.45, 0), 0.25f);
+    cubes[1] = Cube(new Coordinates(0.45, 0.45, 0), 0.25f);
+    cubes[2] = Cube(new Coordinates(0.45, -0.45, 0), 0.25f);
+    cubes[3] = Cube(new Coordinates(-0.45, 0.45, 0), 0.25f);
+    cubes[4] = Cube();
 }
 
 void Game::update(long timeElapsed) {
@@ -30,11 +32,9 @@ void Game::update(long timeElapsed) {
         beta += -0.001f * timeElapsed;
     }
 
-    cube01.rotate(alpha, beta, gamma);
-    cube02.rotate(alpha, beta, gamma);
-    cube03.rotate(alpha, beta, gamma);
-    cube04.rotate(alpha, beta, gamma);
-    cube05.rotate(alpha, beta, gamma);
+    for (int i = 0; i < NUM_OF_CUBES; i++) {
+        cubes[i].rotate(alpha, beta, gamma);
+    }
 
     float translation[3] = {0, 0, 0};
 
@@ -46,20 +46,16 @@ void Game::update(long timeElapsed) {
         translation[0] += 0.001f * timeElapsed;
     }
 
-    cube01.translate(translation[0], translation[1], translation[2]);
-    cube02.translate(translation[0], translation[1], translation[2]);
-    cube03.translate(translation[0], translation[1], translation[2]);
-    cube04.translate(translation[0], translation[1], translation[2]);
-    cube05.translate(translation[0], translation[1], translation[2]);
+    for (int i = 0; i < NUM_OF_CUBES; i++) {
+        cubes[i].translate(translation[0], translation[1], translation[2]);
+    }
 }
 
 void Game::render(long timeElapsed) {
     /* Render here */
     glClear(GL_COLOR_BUFFER_BIT);
 
-    cube01.render();
-    cube02.render();
-    cube03.render();
-    cube04.render();
-    cube05.render();
+    for (int i = 0; i < 5; i++) {
+        cubes[i].render();
+    }
 }
