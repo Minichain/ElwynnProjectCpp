@@ -55,7 +55,7 @@ void Game::render(long timeElapsed) {
     /* Render here */
     glClear(GL_COLOR_BUFFER_BIT);
 
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < NUM_OF_CUBES; i++) {
         cubes[i].render();
     }
 }
